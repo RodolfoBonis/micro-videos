@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\GenreFactory;
 use Illuminate\Database\Seeder;
 
-class GenderSeeder extends Seeder
+class GenreSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +14,6 @@ class GenderSeeder extends Seeder
      */
     public function run()
     {
-        //
+        GenreFactory::times(100)->create();
     }
 }

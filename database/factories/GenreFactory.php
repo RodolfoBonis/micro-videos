@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Gender;
+use App\Models\Genre;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class GenderFactory extends Factory
+class GenreFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Gender::class;
+    protected $model = Genre::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class GenderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->country,
         ];
     }
 }

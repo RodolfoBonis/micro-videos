@@ -3,24 +3,23 @@
 namespace App\Models;
 
 use App\Models\Traits\Uuid;
-use Eloquent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * App\Models\Category
+ * App\Models\Genre
  *
- * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Category query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Genre newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Genre newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Genre query()
  * @mixin Eloquent
  */
-class Category extends Model
+class Genre extends Model
 {
     use HasFactory, SoftDeletes, Uuid;
 
-    protected $fillable = ['name', 'description', 'is_active'];
+    protected $fillable = ['name', 'is_active'];
     protected $dates = ['deleted_at'];
     protected $keyType = 'string';
     public $incrementing = false;
