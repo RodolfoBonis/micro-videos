@@ -8,7 +8,7 @@ services:
         entrypoint: dockerize -template ./.docker/app/.env:.env -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
         environment:
             - _DB_HOST=db
-            - _DB_DATABASE=micro_videos
+            - _DB_DATABASE=micro-videos
             - _DB_USERNAME=root
             - _DB_PASSWORD=root
         volumes:
@@ -44,7 +44,7 @@ services:
         volumes:
             - ./.docker/dbdata:/var/lib/mysql
         environment:
-            - MYSQL_DATABASE=micro_videos
+            - MYSQL_DATABASE=micro-videos
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_USER=root
         networks:
